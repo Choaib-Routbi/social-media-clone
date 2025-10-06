@@ -121,8 +121,11 @@ function App() {
                     type="file" 
                     className="input-post-img"></input>
                     <div className="publish-btn-container">
-                      <p>you can view ,edit or delete later</p>
-                      <button className="publish-post-btn">publish</button>
+                      <p>you can view ,edit or delete this post later</p>
+                      <div className="post-btns-container">
+                      <button className="cancel-post-btn">cancel</button> 
+                      <button className="publish-post-btn">publish</button> 
+                      </div>
                     </div>
                   </div>
                 </div>
