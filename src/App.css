@@ -168,10 +168,8 @@ svg {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
-.profile-sections-container {
+.profile-sections-container  {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
   align-items: center;
   justify-items: center;
   align-content: center;
@@ -181,26 +179,92 @@ svg {
   padding-top: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  button {
-    background-color: transparent;
+}
+.profile-sections-btns{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: space-evenly;
+    align-content: space-between;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+     button {
+      background-color: transparent;
+      border: none;
+      border-radius: 5px;
+      color: var(--text-color);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      padding: 0.3rem 2rem;
+      user-select: none;
+    }
+  
+    button:hover {
+      color: var(--primary-color);
+      background-color: #2f364993;
+    }
+  
+    button:active {
+      transform: scale(0.95);
+    }
+  
+    button:focus {
+      color: var(--primary-color);
+      background-color: #2f364993;
+    }
+}
+.profile-posts{
+  height: 150px;
+  color: var(--text-color);
+  position: relative;
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  align-items: stretch;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  input, textarea{
+    color: var(--text-color);
+    background: #292e3b62;
+    border: 2px solid #424755d5;
+    padding: 0rem 0.5rem;
+  }
+    textarea{
+      resize: none;
+      padding-top: 0.5rem ;
+      font-size: 1.1rem;
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary-color) transparent;
+    }
+}
+.post-input-options{
+  display: grid;
+  button{
+    background-color: var(--primary-color);
     border: none;
     border-radius: 5px;
-    color: var(--text-color);
+    color: #fff;
     font-size: 1rem;
     cursor: pointer;
-    transition: color 0.3s ease;
-    padding: 0.3rem 2rem;
-    user-select: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.3rem 1rem;
+    justify-self: end;
+    margin-top: 0.5rem;
   }
-  .profile-posts-btn {
-    color: var(--primary-color);
-    background-color: #2f364993;
-  }
-  button:hover {
-    color: var(--primary-color);
-    background-color: #2f364993;
-  }
-  button:active {
-    transform: scale(0.95);
+}
+.publish-btn-container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  align-items: end;
+  gap: 0.3rem;
+  justify-content: space-between;
+  p{
+    font-size: 0.8rem;
+    color: var(--text-color);
   }
 }

@@ -102,15 +102,34 @@ function App() {
               </div>
             </div>
             <div className="profile-sections-container">
-              <div className="profile-posts">
+              <div className="profile-sections-btns">
                 <button className="profile-posts-btn">posts</button>
-              </div>
-              <div className="profile-photos">
                 <button className="profile-photos-btn">photos</button>
-              </div>
-              <div className="profile-reels">
                 <button className="profile-reels-btn">reels</button>
               </div>
+                <div className="profile-posts">
+                  <textarea className="post-input"></textarea>
+                  <div className="post-input-options">
+                    <label htmlFor="input-post-tags">tags : </label>
+                    <input 
+                    id="input-post-tags" 
+                    type="text" 
+                    className="input-post-tags"></input>
+                    <label htmlFor="input-post-img">image : </label>
+                    <input
+                    id="input-post-img" 
+                    type="file" 
+                    className="input-post-img"></input>
+                    <div className="publish-btn-container">
+                      <p>you can view ,edit or delete later</p>
+                      <button className="publish-post-btn">publish</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="profile-photos">
+                </div>
+                <div className="profile-reels">
+                </div>
             </div>
           </div>
         </div>
