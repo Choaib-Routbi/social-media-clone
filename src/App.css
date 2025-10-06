@@ -1,0 +1,206 @@
+:root {
+  --primary-color: #0099ff;
+  --background-color: #11131b;
+  --text-color: #c7d1d8;
+  --border-color: #1c1e26;
+}
+body {
+  background-color: var(--background-color);
+  height: 100vh;
+}
+svg {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  transition: fill 0.3s ease;
+  fill: #c7d1d8;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+  gap: 1rem;
+  background-color: #0c0d13;
+  svg {
+    width: 1rem;
+    height: 1rem;
+    margin: 7px;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+    fill: #c7d1d8;
+  }
+  svg:hover {
+    fill: var(--primary-color);
+  }
+  svg:active {
+    transform: scale(0.9);
+    fill: var(--primary-color);
+  }
+  svg:focus {
+    fill: var(--primary-color);
+    outline: 2px solidvar(--primary-color);
+    outline-offset: 2px;
+  }
+  svg:focus:not(:focus-visible) {
+    outline: none;
+  }
+  svg:focus-visible {
+    outline: 2px solidvar(--primary-color);
+    outline-offset: 2px;
+  }
+  svg:focus-visible:hover {
+    fill: var(--primary-color);
+  }
+}
+.profile-container:not(:first-child) {
+  margin: 0px 40px 0px 40px;
+}
+.profile-cover {
+  width: 100%;
+  height: 200px;
+  background-color: #323641;
+  background-image: url("assets/web-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  background-color: #3a3f4b;
+  padding: 3px;
+  position: absolute;
+  transform: translateY(-50%) translateX(20px);
+  div {
+    background: linear-gradient(to bottom right, #0099ff, #6610f2);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+  }
+}
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-top: 6rem;
+  position: relative;
+}
+.profile-content-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.profile-text {
+  grid-column: span 3;
+  padding-left: 1rem;
+}
+.profile-bio {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.profile-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding-right: 1rem;
+}
+.profile-edit {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #2f364993;
+  padding: 0.3rem 0.5rem;
+}
+.profile-details {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #2f364993;
+  padding: 0.3rem 0.5rem;
+}
+.profile-edit:hover {
+  color: #fff;
+}
+.profile-edit:active {
+  transform: scale(0.9);
+}
+.profile-edit:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+.profile-edit:focus:not(:focus-visible) {
+  outline: none;
+}
+.profile-edit:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+.profile-details:hover {
+  color: #fff;
+}
+.profile-details:active {
+  transform: scale(0.9);
+}
+.profile-details:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+.profile-details:focus:not(:focus-visible) {
+  outline: none;
+}
+.profile-details:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+.profile-sections-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  gap: 2rem;
+  border-top: 1px solid rgba(240, 248, 255, 0.211);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  button {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0.3rem 2rem;
+    user-select: none;
+  }
+  .profile-posts-btn {
+    color: var(--primary-color);
+    background-color: #2f364993;
+  }
+  button:hover {
+    color: var(--primary-color);
+    background-color: #2f364993;
+  }
+  button:active {
+    transform: scale(0.95);
+  }
+}
