@@ -188,7 +188,11 @@ function App() {
                   </div>
                 </form>
                 <div className="myPosts-container">
-                  my posts
+                  <p 
+                  style={{
+                    marginTop:"0"
+                  }}>my posts</p>
+                  <div className="posts-items">
                   {posts.length > 0 ? (
                     posts.map((post, idx) => (
                       <div key={idx} className="post">
@@ -222,6 +226,7 @@ function App() {
                   ) : (
                     <div style={{ translate: "45% 600%" }}>no posts</div>
                   )}
+                  </div>
                 </div>
               </div>
             </div>
