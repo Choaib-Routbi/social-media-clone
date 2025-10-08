@@ -221,7 +221,7 @@ function App() {
                       </div>
                     ))
                   ) : (
-                    <div style={{ translate: "45%" }}>no posts</div>
+                    <div style={{ translate: "45%"}}>no posts</div>
                   )}
                   </div>
                 </div>
