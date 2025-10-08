@@ -284,10 +284,13 @@ svg {
     height: 390px;
     max-height: 400px;
     box-sizing: border-box;
-    overflow: hidden;
-    display: grid;
-    .posts-items {
-      overflow-x: hidden; 
+    overflow-y: scroll;
+    .post-heading-title {
+      margin: 0%;
+      }
+    .posts-items{
+      overflow-y: scroll;
+      overflow-x: hidden;
     }
     .post {
       background-color: #3a3f4ba1;
@@ -307,7 +310,7 @@ svg {
       overflow-y: auto;
       .thumbnail {
         height: 100%;
-        background-color: #1f2430;
+        background-color: #242935;
         border-radius: 5px;
         aspect-ratio: 1 / 1;
       }
@@ -453,12 +456,6 @@ button:active {
 
 
 @media (max-width: 570px) {
-  .profile-sections-btns {
-      gap: 1rem;
-      button {
-        font-size: 0.8rem;
-      }
-    }
   .profile-sections-container {
     max-height: 1000px;
     height: 670px;
