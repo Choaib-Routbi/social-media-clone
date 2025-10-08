@@ -324,7 +324,7 @@ svg {
         min-width: 0;
         display: grid;
         align-content: space-between;
-        justify-content:space-between;
+        justify-content: space-between;
         overflow: hidden;
         margin-top: -0.2rem;
       }
@@ -334,8 +334,7 @@ svg {
         height: 20px;
         width: 15px;
         box-sizing: border-box;
-        
-      } 
+      }
       svg:hover {
         background-color: #60687940;
       }
@@ -357,8 +356,8 @@ textarea {
   transition: border 0.1s ease;
   box-sizing: border-box;
 }
-input{
-  height:25px;
+input {
+  height: 25px;
 }
 input:focus,
 textarea:focus {

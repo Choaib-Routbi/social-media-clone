@@ -8,20 +8,21 @@ function App() {
 
   const [postThumb, setPostThumb] = useState("");
 
-  const [posts,setPosts] = useState([])
-  
+  const [posts, setPosts] = useState([]);
 
   const publishPost = () => {
     if (!postText) return;
-    setPosts([{ text:postText, title:postTitle, thumb:postThumb },...posts])
+    setPosts([
+      { text: postText, title: postTitle, thumb: postThumb },
+      ...posts,
+    ]);
     setPostTitle("");
     setPostText("");
-    console.log("published!");  
+    console.log("published!");
   };
   const cancelPost = () => {
     setPostTitle("");
     setPostText("");
-      
   };
   const submitForm = () => {
     console.log("form submited");
@@ -103,7 +104,8 @@ function App() {
               <div className="profile-text">
                 <div className="profile-name">Choaib ER-Routbi</div>
                 <div className="profile-bio">
-                  something about this persone something about this persone  something about this persone something about this persone 
+                  something about this persone something about this persone
+                  something about this persone something about this persone
                   something about this persone
                 </div>
               </div>
@@ -157,7 +159,7 @@ function App() {
                     <label htmlFor="input-post-img">image : </label>
                     <input
                       value={postThumb}
-                      onChange={e => setPostThumb(e.target.value)}
+                      onChange={(e) => setPostThumb(e.target.value)}
                       name="form-img-input"
                       placeholder="add an image."
                       id="input-post-img"
@@ -167,7 +169,11 @@ function App() {
                     <div className="publish-btn-container">
                       <p>you can view ,edit or delete this post later</p>
                       <div className="post-btns-container">
-                        <button type="button" onClick={cancelPost} className="cancel-post-btn">
+                        <button
+                          type="button"
+                          onClick={cancelPost}
+                          className="cancel-post-btn"
+                        >
                           cancel
                         </button>
                         <button
@@ -183,39 +189,39 @@ function App() {
                 </form>
                 <div className="myPosts-container">
                   my posts
-                  {
-                    posts.length > 0 ? ( posts.map((post,idx)=>(
-
-                    <div key={idx} className="post">
-                      <div
-                        style={{
-                          backgroundImage:post.thumb 
-                        }} 
-                        className="thumbnail"></div>
-                      <div
-                        className="post-titleANDtext"
-                        style={{ display: "grid" }}
-                      >
-                        <div className="title">{post.title}</div>
-                        <div className="content">{post.text} </div>
-                      </div>
-                      <div className="post-actions">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 640 640"
+                  {posts.length > 0 ? (
+                    posts.map((post, idx) => (
+                      <div key={idx} className="post">
+                        <div
+                          style={{
+                            backgroundImage: post.thumb,
+                          }}
+                          className="thumbnail"
+                        ></div>
+                        <div
+                          className="post-titleANDtext"
+                          style={{ display: "grid" }}
                         >
-                          Font Awesome Free v7.1.0 by @fontawesome -
-                          https://fontawesome.com License -
-                          https://fontawesome.com/license/free Copyright 2025
-                          Fonticons, Inc
-                          <path d="M320 208C289.1 208 264 182.9 264 152C264 121.1 289.1 96 320 96C350.9 96 376 121.1 376 152C376 182.9 350.9 208 320 208zM320 432C350.9 432 376 457.1 376 488C376 518.9 350.9 544 320 544C289.1 544 264 518.9 264 488C264 457.1 289.1 432 320 432zM376 320C376 350.9 350.9 376 320 376C289.1 376 264 350.9 264 320C264 289.1 289.1 264 320 264C350.9 264 376 289.1 376 320z" />
-                        </svg>
+                          <div className="title">{post.title}</div>
+                          <div className="content">{post.text} </div>
+                        </div>
+                        <div className="post-actions">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"
+                          >
+                            Font Awesome Free v7.1.0 by @fontawesome -
+                            https://fontawesome.com License -
+                            https://fontawesome.com/license/free Copyright 2025
+                            Fonticons, Inc
+                            <path d="M320 208C289.1 208 264 182.9 264 152C264 121.1 289.1 96 320 96C350.9 96 376 121.1 376 152C376 182.9 350.9 208 320 208zM320 432C350.9 432 376 457.1 376 488C376 518.9 350.9 544 320 544C289.1 544 264 518.9 264 488C264 457.1 289.1 432 320 432zM376 320C376 350.9 350.9 376 320 376C289.1 376 264 350.9 264 320C264 289.1 289.1 264 320 264C350.9 264 376 289.1 376 320z" />
+                          </svg>
+                        </div>
                       </div>
-                    </div>) 
-                    )
-                  ) : (<div 
-                    style={{translate:'45% 600%'}}
-                  >no posts</div>)}
+                    ))
+                  ) : (
+                    <div style={{ translate: "45% 600%" }}>no posts</div>
+                  )}
                 </div>
               </div>
             </div>
