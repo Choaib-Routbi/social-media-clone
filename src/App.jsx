@@ -221,7 +221,7 @@ function App() {
                       </div>
                     ))
                   ) : (
-                    <div style={{ translate: "45%"}}>no posts</div>
+                    <div style={{ translate: "45%" , opacity:"50%" , fontSize:"12px"}}>no posts</div>
                   )}
                   </div>
                 </div>
